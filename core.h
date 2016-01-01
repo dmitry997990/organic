@@ -3,6 +3,7 @@
 #include <QVector>
 #include <QDate>
 #include <QString>
+#include <QTime>
 
 class Task {};
 
