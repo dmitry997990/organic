@@ -21,7 +21,7 @@ Task::Task(QDate start_t, QDate end_t, QString nam, int prior, int complet, QTim
 
 //Реализация функции добавление подзадачи в задачу Task
 // с помощью КьВектор
-Task::addSubtask(Task t)
+voыid Task::addSubtask(Task t)
 {
     subtasks.push_back(t);
 }
