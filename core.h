@@ -5,15 +5,15 @@
 #include <QString>
 #include <QTime>
 
+//заголовок класса Task(задача)
 class Task
 {
 public:
-    Task(){}; // Конструктор
-    
+    Task(); // Конструктор
 private:
-    Qstring name; // Название задачи
+    QString name; // Название задачи
     QDate start_day; // Дата начала выполнения
-    Qdate end_day; // Дата конца выполнения
+    QDate end_day; // Дата конца выполнения
     int priority; // Приоритет задачи
     int completeness; // Процент выполнения задачи
     QVector<Task> subtasks; // Массив с подзадачами
