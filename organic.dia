@@ -68,7 +68,7 @@
         <dia:point val="10.25,7.15"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="10.2,7.1;30.82,14.6"/>
+        <dia:rectangle val="10.2,7.1;30.82,15.4"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="10.25,7.15"/>
@@ -77,7 +77,7 @@
         <dia:real val="20.52"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="7.3999999999999995"/>
+        <dia:real val="8.2000000000000011"/>
       </dia:attribute>
       <dia:attribute name="name">
         <dia:string>#Task#</dia:string>
@@ -271,6 +271,29 @@
           </dia:attribute>
           <dia:attribute name="comment">
             <dia:string>#процент выполнения задачи#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="1"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#subtasks#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#QVector&lt;Task&gt;#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>#Массив с подзадачами#</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="1"/>
