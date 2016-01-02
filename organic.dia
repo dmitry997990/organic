@@ -557,7 +557,7 @@
                 <dia:string>#Task#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
-                <dia:string>##</dia:string>
+                <dia:string>#0#</dia:string>
               </dia:attribute>
               <dia:attribute name="comment">
                 <dia:string>#задача#</dia:string>
