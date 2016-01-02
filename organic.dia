@@ -86,7 +86,7 @@
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:attribute name="comment">
-        <dia:string>#Класс-контейнер, описывающий задачу. Содержит: имя задачи, время начала, время конца, приоритет, законченность#</dia:string>
+        <dia:string>#Класс-контейнер, описывающий задачу. Содержит: имя задачи, время начала, время конца, приоритет, завершенность задачи.#</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
         <dia:boolean val="false"/>
