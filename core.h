@@ -57,7 +57,7 @@ public:
 private:
     bool serialize(); // Сериализует объект базы и сохраняет в файл
     bool deserialize(); // Дисериализует объект и сохраняет в database
-}
+};
 
 #endif // CORE_H
 

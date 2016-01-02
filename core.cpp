@@ -88,3 +88,89 @@ void Task::addSubtask(TaskBase t)
 {
     subtasks.push_back(t);
 }
+
+//описание класса DataBase
+//добавление задачи
+void DataBase::addTask(SubTask task)
+{
+    database.push_back(task);
+}
+
+//удаление задачи
+void DataBase::deleteTask(QString name)
+{
+   // database.erase(DataBase.database);
+}
+
+//редактирование задачи
+void DataBase::editTask(QString name)
+{   cout << "1 - Изменить имя задачи" << endl;
+    cout << "2 - Изменить день начала задачи" << endl;
+    cout << "3 - Изменить день конца задачи" << endl;
+    cout << "4 - Изменить приоритет задачи" << endl;
+    cout << "5 - Изменить процент завершенности задачи" << endl;
+    cout << "6 - Изменить время начала задачи" << endl;
+    cout << "7 - Изменить время конца задачи" << endl;
+
+    int n;
+    cin  >> n; // ? предлагаю заменить на getch(), или другой обработчик нажатых клавиш
+
+    if (n == 1)
+    {
+        cout << "Введите имя: ";
+        QString nam;
+        cin >> nam;
+        SubTask.setName(nam);
+    }
+
+    else if (n == 2)
+    {
+        cout << "Введите день начала задачи: ";
+        QDate startday;
+        cin >> startday;
+        SubTask.setStartDay(startday);
+    }
+
+    else if (n == 3)
+    {
+        cout << "Введите день конца задачи: ";
+        QDate endday;
+        cin >> endday;
+        SubTask.setEndDay(endday);
+    }
+
+    else if (n == 4)
+    {
+        cout << "Введите приоритет задачи: ";
+        int prior;
+        cin >> prior;
+        SubTask.setPriority(prior);
+    }
+
+    else if (n == 5)
+    {
+        cout << "Введите процент завершенности задачи: ";
+        int com;
+        cin >> com;
+        SubTask.setCompleteness((com);
+    }
+
+    else if (n == 6)
+    {
+        cout << "Введите время начала задачи: ";
+        QTime starttime;
+        cin >> starttime;
+        SubTask.setStartTime(starttime);
+    }
+
+    else if (n == 7)
+    {
+        cout << "Введите время конца задачи: ";
+        QTime endtime;
+        cin >> endtime;
+        SubTask.setEndTime(endtime);
+    }
+
+    else cout << "Ошибка ввода!"
+
+}

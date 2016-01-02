@@ -1463,7 +1463,7 @@
         <dia:real val="3.3999999999999999"/>
       </dia:attribute>
       <dia:attribute name="name">
-        <dia:string>#SubTask#</dia:string>
+        <dia:string>#Task#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
         <dia:string>##</dia:string>
