@@ -10,7 +10,7 @@ class Task
 {
 public:
     Task(QDate start_t, QDate end_t, QString nam, int prior, int complet, QTime start_tim, QTime end_tim); // Конструктор
-    void addSubtask(Task t); //метод добавляет подзадачу
+    void addSubtask(Task t); // Метод добавляет подзадачу в вектор subtasks
 private:
     QString name; // Название задачи
     QDate start_day; // Дата начала выполнения
