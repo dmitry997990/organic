@@ -19,7 +19,7 @@ TaskBase::TaskBase(QDate start_t, QDate end_t, QString nam, int prior, int compl
     completeness = complet;
     priority = prior;
 }
-//описание set-аксессоров
+//описание set-аксессоров TaskBase
 void TaskBase::setStartDay(QDate start_day)
 {
     this->start_day = start_day;
@@ -49,7 +49,7 @@ void TaskBase::setEndTime(QTime end_time)
     this->end_time = end_time;
 }
 
-//описание get-аксессоров
+//описание get-аксессоров TaskBase
 
 QDate TaskBase::getStartDay()
 {
@@ -80,9 +80,9 @@ QTime TaskBase::getEndTime()
     return end_time;
 }
 
-//описание класса Subtask
-//конструктор класса Subtask
-Task::Task(QDate start_t, QDate end_t, QString nam, int prior, int complet, QTime start_tim, QTime end_tim) : TaskBase(start_t, end_t, nam, prior, complet, start_tim, end_tim) {}
+//описание класса SubTask
+//конструктор класса SubTask
+SubTask::SubTask(QDate start_t, QDate end_t, QString nam, int prior, int complet, QTime start_tim, QTime end_tim) : TaskBase(start_t, end_t, nam, prior, complet, start_tim, end_tim) {}
 //добавление подзадачи
 void Task::addSubtask(TaskBase t)
 {
