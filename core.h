@@ -2,14 +2,25 @@
 #define CORE_H
 #include <QVector>
 #include <QDate>
+#include <QList>
 #include <QString>
 #include <QTime>
 
-//заголовок класса TaskBase(задача)
-class TaskBase
+//структура подзадача
+struct SubTask {
+    QString name; // Название задачи
+    QDate start_day; // Дата начала выполнения
+    QDate end_day; // Дата конца выполнения
+    int priority; // Приоритет задачи
+    int completeness; // Процент выполнения задачи
+    QTime start_time; // Время начала выполнения
+    QTime end_time; // Время конца выполнения
+};
+//заголовок класса Task(задача)
+class Task
 {
 public:
-    TaskBase(QDate start_t, QDate end_t, QString nam, int prior, int complet, QTime start_tim, QTime end_tim); // Конструктор
+    Task(QDate start_t, QDate end_t, QString nam, int prior, int complet, QTime start_tim, QTime end_tim); // Конструктор
     //аксессоры к полям
     void setName(QString name);
     void setStartDay(QDate start_day);
@@ -18,6 +29,7 @@ public:
     void setCompleteness(int com);
     void setStartTime(QTime start_time);
     void setEndTime(QTime end_time);
+    void addSubtask(SubTask st);//добавляет подзадачу
     QString getName();
     QDate getStartDay();
     QDate getEndDay();
@@ -25,6 +37,7 @@ public:
     int getCompleteness();
     QTime getStartTime();
     QTime getEndTime();
+    QList<SubTask> subtasks; //База подзадач
 protected:
     QString name; // Название задачи
     QDate start_day; // Дата начала выполнения
@@ -35,23 +48,12 @@ protected:
     QTime end_time; // Время конца выполнения
 };
 
-// Наследуемый класс подзадачи 
-class SubTask : public TaskBase
-{
-public:
-    SubTask(QDate start_t, QDate end_t, QString nam, int prior, int complet, QTime start_tim, QTime end_time);
-    void addSubtask(TaskBase t); // Метод добавляет подзадачу в вектор subtasks
-private:
-    QVector<TaskBase> subtasks;//массив подзадач
-};
-
-
 // Класс, содержащий БД и отвечающий за работу с ней: добавление, удаление, редактирование записей. Так же содержит средства для реализации механизма сериализации
 class DataBase
 {
-public:
-    QVector<SubTask> database; //База задач
-    void addTask(SubTask task); // Добавляет задачу в БД
+public:   
+    QList<Task> database; //База задач
+    void addTask(Task task); // Добавляет задачу в БД
     void deleteTask(QString name); //Удаляет задачу по ее названию
     void editTask(QString name); // Редактирует задачу по названию задачи
 private:
